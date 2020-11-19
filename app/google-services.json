@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "935061163159",
+    "firebase_url": "https://hediye-bulucu-f67e7.firebaseio.com",
+    "project_id": "hediye-bulucu-f67e7",
+    "storage_bucket": "hediye-bulucu-f67e7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:935061163159:android:3d445d5373f2e04d4e2dd2",
+        "android_client_info": {
+          "package_name": "com.k.hedbul"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "935061163159-pbt6lvncpnc4c70grcr0415dfu8h1r9a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBD2FFKcRMp5IaqE9ezNL0f04OWcBGs7l8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "935061163159-pbt6lvncpnc4c70grcr0415dfu8h1r9a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

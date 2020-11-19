@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.anasayfa.HomeFragment">
+
+    <TextView
+        android:id="@+id/textOneri"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="10dp"
+        android:text="Rastgele Öneriler"
+        android:textStyle="bold"
+        android:padding="5dp"
+        android:textSize="20sp"
+        android:textColor="#050505"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rastRec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textOneri"
+        android:layout_centerHorizontal="true"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:spanCount="2"
+        />
+</RelativeLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="150dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="20dp"
+    android:gravity="center">
+
+    <ImageView
+        android:id="@+id/giftImage"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:background="#fff"/>
+    <ImageButton
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/book_button"
+        android:layout_margin="5dp"
+        android:src="@drawable/bookmark"
+        android:layout_above="@id/textName"
+        android:layout_alignParentRight="true"/>
+
+
+    <TextView
+        android:id="@+id/textName"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        android:layout_below="@id/giftImage"
+        android:background="#fff"
+        android:text="Rastgele Öneriler"
+        android:padding="4dp"
+        android:textSize="17sp"
+        android:textColor="#050505"/>
+
+
+
+
+</RelativeLayout>
