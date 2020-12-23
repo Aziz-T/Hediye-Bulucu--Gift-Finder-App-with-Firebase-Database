@@ -7,6 +7,7 @@ public class HediyeModel {
     private String yas;
     private String ilgi;
     private String ozel;
+
     public HediyeModel() { }
     public HediyeModel(String resimUrl, String hediyeAdi) {
         this.resimUrl = resimUrl;
@@ -21,6 +22,7 @@ public class HediyeModel {
         this.ilgi = ilgi;
         this.ozel = ozel;
     }
+
 
     public String getResimUrl() {
         return resimUrl;

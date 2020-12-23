@@ -43,21 +43,21 @@ public class HomeFragment extends Fragment {
         final HediyeAdapter hediyeAdapter = new HediyeAdapter(asilHediyeList);
         recyclerView.setAdapter(hediyeAdapter);
 
-        myRef.child("Hediyeler").addListenerForSingleValueEvent(new ValueEventListener() {
+        myRef.child("").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for(DataSnapshot dataSnapshot:snapshot.getChildren()){
                     normalHediyeList.add(dataSnapshot.getValue(HediyeModel.class));
                 }
                 hediyeAdapter.notifyDataSetChanged();
-                Random random = new Random();
-                for(i=0; i<30 ; i++){
-                    position=random.nextInt(normalHediyeList.size());
-                    asilHediyeList.add(normalHediyeList.get(position));
+              //  Random random = new Random();
+                for(i=0; i<normalHediyeList.size() ; i++){
+                    //position=random.nextInt(normalHediyeList.size());
+                    asilHediyeList.add(normalHediyeList.get(i));
                 }
 
 
-            }
+          }
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
