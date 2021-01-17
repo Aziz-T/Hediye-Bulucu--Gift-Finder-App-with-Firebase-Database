@@ -9,6 +9,8 @@
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:id="@+id/toolbar"
+        app:title="Hediye Bulucu"
+        app:titleTextColor="#ffffff"
         android:background="@color/temaRengi"/>
 
 

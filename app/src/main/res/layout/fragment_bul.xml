@@ -5,117 +5,59 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.bul.DashboardFragment">
-    <TextView
-        android:id="@+id/textAd"
-        android:layout_width="110dp"
-        android:layout_height="40dp"
-        android:layout_margin="10dp"
-        android:text="Ad Soyad:  "
-        android:textStyle="bold"
-        android:gravity="center"
-        android:textSize="20sp"
-        android:textColor="#050505"/>
     <EditText
-        android:id="@+id/adSoyad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Hediye Ara"
+        android:id="@+id/aramaEdit"
+        android:layout_toLeftOf="@id/image"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="5dp"
+        />
+    <ImageView
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@drawable/ara_button"
+        android:padding="5dp"
+        android:layout_margin="4dp"
+        android:id="@+id/image"
+        android:layout_alignParentRight="true"/>
+
+    <TextView
+        android:layout_below="@id/aramaEdit"
+        android:id="@+id/textOneri"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/textAd"
-        android:hint="(İsteğe Bağlı)"
-        android:layout_margin="5dp"/>
-    <TextView
-        android:id="@+id/textCinsiyet"
-        android:layout_width="110dp"
         android:layout_height="40dp"
-        android:layout_margin="10dp"
-        android:text="Cinsiyet: "
-        android:textStyle="bold"
+        android:layout_margin="5dp"
+        android:text="Rastgele Öneriler"
+        android:textSize="15sp"
         android:gravity="center"
-        android:layout_below="@id/adSoyad"
-        android:textSize="20sp"
         android:textColor="#050505"/>
 
-    <Spinner
-        android:id="@+id/cinsiyetSp"
-        android:layout_width="0dp"
-        android:layout_height="40dp"
-        android:layout_margin="10dp"
-        android:layout_alignParentRight="true"
-        android:layout_toRightOf="@id/textCinsiyet"
-        android:layout_below="@id/adSoyad"
-        />
-    <TextView
-        android:id="@+id/textYas"
-        android:layout_width="110dp"
-        android:layout_height="40dp"
-        android:layout_margin="10dp"
-        android:text="Yaş : "
-        android:textStyle="bold"
-        android:gravity="center"
-        android:layout_below="@id/textCinsiyet"
-        android:textSize="20sp"
-        android:textColor="#050505"/>
-    <Spinner
-        android:id="@+id/yasSp"
-        android:layout_width="0dp"
-        android:layout_height="40dp"
-        android:layout_margin="10dp"
-        android:layout_alignParentRight="true"
-        android:layout_toRightOf="@id/textCinsiyet"
-        android:layout_below="@id/cinsiyetSp"
-        />
-    <TextView
-        android:id="@+id/textİlgi"
-        android:layout_width="110dp"
-        android:layout_height="40dp"
-        android:layout_margin="10dp"
-        android:text="İlgi Alanlari: "
-        android:textStyle="bold"
-        android:gravity="center"
-        android:layout_below="@id/textYas"
-        android:textSize="20sp"
-        android:textColor="#050505"/>
-    <Spinner
-        android:id="@+id/ilgialaniSp"
-        android:layout_width="0dp"
-        android:layout_height="40dp"
-        android:layout_margin="10dp"
-        android:layout_alignParentRight="true"
-        android:layout_toRightOf="@id/textİlgi"
-        android:layout_below="@id/yasSp"
-        />
-    <TextView
-        android:id="@+id/textOzel"
-        android:layout_width="120dp"
-        android:layout_height="40dp"
-        android:layout_margin="10dp"
-        android:text="Özel Günler:"
-        android:textStyle="bold"
-        android:gravity="center"
-        android:layout_below="@id/textİlgi"
-        android:textSize="20sp"
-        android:textColor="#050505"/>
-    <Spinner
-        android:id="@+id/ozelgunlerSp"
-        android:layout_width="0dp"
-        android:layout_height="40dp"
-        android:layout_margin="10dp"
-        android:layout_alignParentRight="true"
-        android:layout_toRightOf="@id/textİlgi"
-        android:layout_below="@id/ilgialaniSp"
-        />
-    <Button
-        android:id="@+id/bulButon"
-        android:layout_width="240dp"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rastRec"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/ozelgunlerSp"
+        android:layout_below="@id/textOneri"
         android:layout_centerHorizontal="true"
-        android:text="HEDİYE BUL"
-        android:textSize="15dp"
-        android:textStyle="bold"
-        android:textColor="#fff"
-        android:layout_marginTop="40dp"
-        android:background="@drawable/shape_bul_button"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:spanCount="2"
         />
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
 
-
+        />
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-3385965964855097/5341659112">
+    </com.google.android.gms.ads.AdView>
 </RelativeLayout>
