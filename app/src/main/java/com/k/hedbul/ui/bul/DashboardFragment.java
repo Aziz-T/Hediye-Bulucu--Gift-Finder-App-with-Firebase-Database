@@ -45,7 +45,7 @@ public class DashboardFragment extends Fragment {
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference myRef = database.getReference();
     private RecyclerView recyclerView;
-    private EditText aramaEdit;
+   // private EditText aramaEdit;
     private TextView oneri;
 
     private List<HediyeModel> asilHediyeList;
@@ -59,7 +59,7 @@ public class DashboardFragment extends Fragment {
 
 
         View root = inflater.inflate(R.layout.fragment_bul, container, false);
-        aramaEdit=root.findViewById(R.id.aramaEdit);
+      //  aramaEdit=root.findViewById(R.id.aramaEdit);
         recyclerView=root.findViewById(R.id.rastRec);
         oneri=root.findViewById(R.id.textOneri);
         progressBar=root.findViewById(R.id.progressBar);
@@ -75,7 +75,7 @@ public class DashboardFragment extends Fragment {
 
 
         mInterstitialAd = new InterstitialAd(root.getContext());
-        mInterstitialAd.setAdUnitId("ca-app-pub-3385965964855097/3794990763");
+        mInterstitialAd.setAdUnitId("ca-app-pub-8277541514565651/1490596327");
         mInterstitialAd.loadAd(new AdRequest.Builder().build());
         if (mInterstitialAd.isLoaded()) {
             mInterstitialAd.show();
@@ -87,14 +87,14 @@ public class DashboardFragment extends Fragment {
         final HediyeAdapter hediyeAdapter = new HediyeAdapter(asilHediyeList,getContext());
         recyclerView.setAdapter(hediyeAdapter);
         oneri.setText("Rastgele Öneriler");
-        myRef.child("").addListenerForSingleValueEvent(new ValueEventListener() {
+        myRef.child("Hediyeler").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for(DataSnapshot dataSnapshot:snapshot.getChildren()){
                     normalHediyeList.add(dataSnapshot.getValue(HediyeModel.class));
                 }
                 hediyeAdapter.notifyDataSetChanged();
-                aramaEdit.addTextChangedListener(new TextWatcher() {
+               /* aramaEdit.addTextChangedListener(new TextWatcher() {
                     @Override
                     public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
@@ -113,7 +113,7 @@ public class DashboardFragment extends Fragment {
                             oneri.setText("Rastgele Öneriler");
                         }
                     }
-                });
+                });*/
 
                 //  Random random = new Random();
                 for(i=0; i<25 ; i++){
@@ -134,7 +134,7 @@ public class DashboardFragment extends Fragment {
         return root;
     }
 
-    private ArrayList<HediyeModel> filter(String text) {
+    /*private ArrayList<HediyeModel> filter(String text) {
         ArrayList<HediyeModel> filteredList = new ArrayList<>();
         for(HediyeModel hediyeModel:normalHediyeList){
             if(hediyeModel.getHediyeAdi().toLowerCase().contains(text.toLowerCase())){
@@ -142,5 +142,5 @@ public class DashboardFragment extends Fragment {
             }
         }
         return filteredList;
-    }
+    }*/
 }

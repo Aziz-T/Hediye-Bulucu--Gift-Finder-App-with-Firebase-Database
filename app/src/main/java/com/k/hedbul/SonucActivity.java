@@ -78,7 +78,7 @@ public class SonucActivity extends AppCompatActivity {
        // Toast.makeText(this, cinsiyet+yas+ilgi+ozel, Toast.LENGTH_SHORT).show();
 
 
-        myRef.child("").addListenerForSingleValueEvent(new ValueEventListener() {
+        myRef.child("Hediyeler").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for(DataSnapshot dataSnapshot:snapshot.getChildren()){

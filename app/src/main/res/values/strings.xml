@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">HediyeBulucu</string>
+    <string name="app_name">Hediye Bulucu</string>
     <string name="title_activity_hediye">HediyeActivity</string>
     <string name="title_home">Hediye Bul</string>
     <string name="title_dashboard">Göz At</string>

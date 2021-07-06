@@ -20,7 +20,7 @@
             android:layout_height="40dp"
             android:layout_margin="5dp"
             android:gravity="center"
-            android:text="Ad Soyad:  "
+            android:text="Ad Soyad"
             android:textColor="#050505"
             android:textSize="18sp"
            />
@@ -38,7 +38,7 @@
             android:layout_height="40dp"
             android:layout_margin="5dp"
             android:gravity="center"
-            android:text="Cinsiyet: "
+            android:text="Cinsiyet"
             android:textColor="#050505"
             android:textSize="15sp" />
         <androidx.cardview.widget.CardView
@@ -46,7 +46,8 @@
             android:layout_height="wrap_content"
             android:elevation="5dp"
             android:layout_marginLeft="40dp"
-            android:layout_marginRight="40dp">
+            android:layout_marginRight="40dp"
+            app:cardCornerRadius="40dp">
         <Spinner
             android:id="@+id/cinsiyetSp"
             android:layout_width="match_parent"
@@ -59,7 +60,7 @@
             android:layout_height="40dp"
             android:layout_margin="5dp"
             android:gravity="center"
-            android:text="Yaş : "
+            android:text="Yaş"
             android:textColor="#050505"
             android:textSize="15sp" />
         <androidx.cardview.widget.CardView
@@ -67,7 +68,8 @@
             android:layout_height="wrap_content"
             android:elevation="5dp"
             android:layout_marginLeft="40dp"
-            android:layout_marginRight="40dp">
+            android:layout_marginRight="40dp"
+            app:cardCornerRadius="40dp">
         <Spinner
             android:id="@+id/yasSp"
             android:layout_width="match_parent"
@@ -80,7 +82,7 @@
             android:layout_height="40dp"
             android:layout_margin="5dp"
             android:gravity="center"
-            android:text="İlgi Alanlari: "
+            android:text="İlgi Alanlari"
             android:textColor="#050505"
             android:textSize="15sp" />
         <androidx.cardview.widget.CardView
@@ -88,7 +90,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="40dp"
             android:layout_marginRight="40dp"
-            android:elevation="5dp">
+            android:elevation="5dp"
+            app:cardCornerRadius="40dp">
         <Spinner
             android:id="@+id/ilgialaniSp"
             android:layout_width="match_parent"
@@ -101,7 +104,7 @@
             android:layout_height="40dp"
             android:layout_margin="5dp"
             android:gravity="center"
-            android:text="Özel Günler:"
+            android:text="Özel Günler"
             android:textColor="#050505"
             android:textSize="15sp" />
         <androidx.cardview.widget.CardView
@@ -109,7 +112,8 @@
             android:layout_height="wrap_content"
             android:elevation="5dp"
             android:layout_marginLeft="40dp"
-            android:layout_marginRight="40dp">
+            android:layout_marginRight="40dp"
+            app:cardCornerRadius="40dp">
         <Spinner
             android:id="@+id/ozelgunlerSp"
             android:layout_width="match_parent"
@@ -118,8 +122,8 @@
         </androidx.cardview.widget.CardView>
         <Button
             android:id="@+id/bulButon"
-            android:layout_width="240dp"
-            android:layout_height="wrap_content"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="40dp"
             android:layout_marginBottom="40dp"
@@ -139,6 +143,6 @@
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
         ads:adSize="BANNER"
-        ads:adUnitId="ca-app-pub-3385965964855097/5341659112">
+        ads:adUnitId="ca-app-pub-8277541514565651/3186821374">
     </com.google.android.gms.ads.AdView>
 </RelativeLayout>

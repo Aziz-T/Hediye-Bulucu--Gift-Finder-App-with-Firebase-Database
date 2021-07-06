@@ -18,15 +18,13 @@
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_margin="10dp"
-
         android:layout_below="@id/toolbar"
-        android:textStyle="bold"
         android:padding="5dp"
         android:textSize="20sp"
         android:textColor="#050505"/>
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/sonucRec"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/textSonuc"
         android:layout_centerHorizontal="true"
@@ -48,6 +46,6 @@
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
         ads:adSize="BANNER"
-        ads:adUnitId="ca-app-pub-3385965964855097/5341659112">
+        ads:adUnitId="ca-app-pub-8277541514565651/3186821374">
     </com.google.android.gms.ads.AdView>
 </RelativeLayout>

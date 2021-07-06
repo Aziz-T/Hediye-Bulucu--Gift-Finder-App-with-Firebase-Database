@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="170dp"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="10dp"
+    android:layout_margin="1dp"
     android:gravity="center"
-    android:elevation="6dp">
+    android:elevation="1dp">
 
     <RelativeLayout
-        android:layout_width="170dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center" >
+        >
     <ImageView
         android:id="@+id/giftImage"
-        android:layout_width="150dp"
+        android:layout_width="match_parent"
         android:layout_height="150dp"
-        android:layout_marginTop="5dp"
+        android:layout_margin="2dp"
         android:layout_centerHorizontal="true"
         android:background="#fff"/>
    
@@ -25,6 +25,7 @@
         android:layout_width="150dp"
         android:layout_height="80dp"
         android:layout_below="@id/giftImage"
+        android:layout_centerHorizontal="true"
         android:background="#fff"
         android:text="Rastgele Öneriler"
         android:padding="4dp"
@@ -36,7 +37,7 @@
             android:id="@+id/popUpButon"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_toRightOf="@id/textName"
+            android:layout_alignParentRight="true"
             android:layout_alignBottom="@id/textName"
             android:src="@drawable/popup_buton"
             android:background="#FFFFFF"

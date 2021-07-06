@@ -66,7 +66,7 @@ public class HomeFragment extends Fragment {
         mAdView.loadAd(adRequest);
 
         mInterstitialAd = new InterstitialAd(root.getContext());
-        mInterstitialAd.setAdUnitId("ca-app-pub-3385965964855097/3794990763");
+        mInterstitialAd.setAdUnitId("ca-app-pub-8277541514565651/1490596327");
         mInterstitialAd.loadAd(new AdRequest.Builder().build());
 
         cinsiyet=new ArrayList<>();
